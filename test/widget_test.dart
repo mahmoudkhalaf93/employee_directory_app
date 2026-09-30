@@ -11,20 +11,15 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:employee_directory_app/main.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
+  testWidgets('App smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+    await tester.pumpWidget(const EmployeeDirectoryApp());
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    // Verify that the title 'Employee Directory' is on the screen.
+    expect(find.text('Employee Directory'), findsOneWidget);
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
-
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    // Verify that the 'Fetch Employees' button is present.
+    expect(find.byIcon(Icons.download), findsOneWidget);
+    expect(find.text('Fetch Employees'), findsOneWidget);
   });
 }
