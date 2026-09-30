@@ -2,6 +2,14 @@
 
 A Flutter mini-project demonstrating real-world data handling patterns, including REST API fetching, advanced networking with Dio, error handling, JSON serialization, and local caching with Shared Preferences.
 
+## 📸 Screenshots
+
+<div align="center">
+  <img src="screenshots/1.png" alt="No Data Screen" width="200"/>
+  <img src="screenshots/2.png" alt="Home Screen" width="200"/>
+  <img src="screenshots/3.png" alt="Details Screen" width="200"/>
+</div>
+
 ## Features
 - **Fetch API Data:** Retrieves employee data from `https://dummy.restapiexample.com/api/v1/employees`.
 - **Advanced Networking:** Uses the `dio` package for clean API calls and error handling.
